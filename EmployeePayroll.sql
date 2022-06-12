@@ -16,3 +16,8 @@ Insert into employee_Payroll values('Zeus', 2700, '2022-01-15')
 
 select * from employee_Payroll
 select salary from employee_Payroll where Name = 'Rohan'
+
+Alter table employee_Payroll
+Add Gender varchar(1)
+update employee_Payroll set Gender = 'F' where Name = 'Athena'
+update employee_Payroll set Gender = 'M' where Name = 'Rohan' or Name = 'Hades' or Name = 'Zeus'
