@@ -21,3 +21,15 @@ Alter table employee_Payroll
 Add Gender varchar(1)
 update employee_Payroll set Gender = 'F' where Name = 'Athena'
 update employee_Payroll set Gender = 'M' where Name = 'Rohan' or Name = 'Hades' or Name = 'Zeus'
+
+
+select Sum(salary) from employee_Payroll where Gender = 'M' Group by Gender 
+select Sum(salary) from employee_Payroll where Gender = 'F' Group by Gender
+select Avg(salary) from employee_Payroll where Gender = 'M' Group by Gender
+select Avg(salary) from employee_Payroll where Gender = 'F' Group by Gender
+select Min(salary) from employee_Payroll where Gender = 'M' Group by Gender 
+select Min(salary) from employee_Payroll where Gender = 'F' Group by Gender 
+select Max(salary) from employee_Payroll where Gender = 'M' Group by Gender
+select Max(salary) from employee_Payroll where Gender = 'F' Group by Gender
+select Count(*) from employee_Payroll where Gender = 'M' Group by Gender
+select Count(*) from employee_Payroll where Gender = 'F' Group by Gender
