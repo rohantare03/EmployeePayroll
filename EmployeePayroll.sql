@@ -15,3 +15,4 @@ Insert into employee_Payroll values('Athena', 4000, '2021-12-10')
 Insert into employee_Payroll values('Zeus', 2700, '2022-01-15')
 
 select * from employee_Payroll
+select salary from employee_Payroll where Name = 'Rohan'
