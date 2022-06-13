@@ -35,5 +35,21 @@ select Count(*) from employee_Payroll where Gender = 'M' Group by Gender
 select Count(*) from employee_Payroll where Gender = 'F' Group by Gender
 
 Alter table employee_Payroll
+Add PhoneNumber bigint, Address varchar(100), Department varchar(30)
+
+Update employee_Payroll set PhoneNumber = 9158499217 where Name in ('Rohan')
+Update employee_Payroll set PhoneNumber = 9149923457 where Name in ('Hades')
+Update employee_Payroll set PhoneNumber = 9234764337 where Name in ('Athena')
+Update employee_Payroll set PhoneNumber = 9956432357 where Name in ('Zeus')
+Update employee_Payroll set Address = 'Mumbai' where Name in ('Rohan')
+Update employee_Payroll set Address = 'Vasai' where Name in ('Hades')
+Update employee_Payroll set Address = 'Mulund' where Name in ('Athena')
+Update employee_Payroll set Address = 'Dadar' where Name in ('Zeus')
+Update employee_Payroll set Department = 'CEO' where Name in ('Rohan')
+Update employee_Payroll set Department = 'Intern' where Name in ('Hades')
+Update employee_Payroll set Department = 'Assistant' where Name in ('Athena')
+Update employee_Payroll set Department = 'Associate' where Name in ('Zeus')
+
+Alter table employee_Payroll
 Add BasicPay int, Deduction int, TaxablePay int, IncomeTax int, NetPay int
 
