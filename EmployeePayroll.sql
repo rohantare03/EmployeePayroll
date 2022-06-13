@@ -33,3 +33,7 @@ select Max(salary) from employee_Payroll where Gender = 'M' Group by Gender
 select Max(salary) from employee_Payroll where Gender = 'F' Group by Gender
 select Count(*) from employee_Payroll where Gender = 'M' Group by Gender
 select Count(*) from employee_Payroll where Gender = 'F' Group by Gender
+
+Alter table employee_Payroll
+Add BasicPay int, Deduction int, TaxablePay int, IncomeTax int, NetPay int
+
