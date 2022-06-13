@@ -53,3 +53,9 @@ Update employee_Payroll set Department = 'Associate' where Name in ('Zeus')
 Alter table employee_Payroll
 Add BasicPay int, Deduction int, TaxablePay int, IncomeTax int, NetPay int
 
+Insert into employee_Payroll (Name, BasicPay, StartDate, Gender)
+values('Terrisa', 7000, '2022-01-22', 'F')
+Update employee_Payroll set Department = 'Sales' where Name = 'Terrisa'
+Insert into employee_Payroll (Name, Department) values ('Terrisa', 'Marketing')
+
+
