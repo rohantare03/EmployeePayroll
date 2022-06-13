@@ -58,4 +58,29 @@ values('Terrisa', 7000, '2022-01-22', 'F')
 Update employee_Payroll set Department = 'Sales' where Name = 'Terrisa'
 Insert into employee_Payroll (Name, Department) values ('Terrisa', 'Marketing')
 
+create Table Company
+(
+ID	int,
+CompanyName	varchar(255),
+constraint Company_foreign_Key_EmpID foreign key(ID) references employee_Payroll(ID) on delete cascade
+)
+
+create Table Payrollofemployee
+(
+ID		int,
+BasicPay	int,
+Deduction	int,
+TaxablePay	int,
+IncomeTax	int,
+NetPay		int
+constraint Payrollofemployee_foreign_Key_ID foreign key(ID) references employee_Payroll(ID) on delete cascade
+)
+
+create table Departmenttable
+(
+Id int,
+Department varchar (20)
+constraint Departmenttable_foreign_Key_ID foreign key(ID) references employee_Payroll(ID) on delete cascade
+);
+
 
